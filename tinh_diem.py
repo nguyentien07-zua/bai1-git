@@ -17,6 +17,11 @@ def main():
     diem_ly = float(input("Nhập điểm Lý: "))
     diem_hoa = float(input("Nhập điểm Hóa: "))
 
+    for diem in [diem_toan, diem_ly, diem_hoa]:
+        if diem < 0 or diem > 10:
+            print("Điểm không hợp lệ! Vui lòng nhập từ 0 đến 10.")
+            return
+
     diem_tb = tinh_diem_trung_binh(diem_toan, diem_ly, diem_hoa)
     ket_qua = xep_loai(diem_tb)
 
